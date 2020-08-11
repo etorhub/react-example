@@ -1,12 +1,17 @@
 import React from 'react';
 import './App.css';
-import Characters from './Characters';
+import MealsContextProvider from './context/meals'
+import MealForm from './components/MealForm';
+import Total from './components/Total';
+import MealsList from './components/MealsList';
 
 function App() {
   return (
-    <div className="container">
-      <Characters />
-    </div>
+    <MealsContextProvider>
+      <MealForm />
+      <MealsList />
+      <Total />
+    </MealsContextProvider>
   );
 }
 
